@@ -33,15 +33,31 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset('assets/diamond.png'),
                 SizedBox(height: 16.0),
-                Text('SHRINE'),
+                Text('SHRHEIEIDHINE'),
               ],
             ),
             SizedBox(height: 120.0),
-            // TODO: Wrap Username with AccentColorOverride (103)
-            // TODO: Remove filled: true values (103)
-            // TODO: Wrap Password with AccentColorOverride (103)
-            // TODO: Add TextField widgets (101)
-            // TODO: Add button bar (101)
+            TextField(
+                decoration:
+                    InputDecoration(filled: true, labelText: 'Username')),
+            SizedBox(height: 12.0),
+            TextField(
+              decoration: InputDecoration(filled: true, labelText: 'Password'),
+              obscureText: true,
+            ),
+            ButtonBar(
+              children: <Widget>[
+                FlatButton(
+                  child: Text('Cancel'),
+                  onPressed: () {},
+                ),
+                RaisedButton(
+                  child: Text('Sign in'),
+                  color: Theme.of(context).accentColor,
+                  onPressed: () {},
+                )
+              ],
+            )
           ],
         ),
       ),
