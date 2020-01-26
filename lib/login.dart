@@ -20,7 +20,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101)
+  final _usernameTextCtrl = TextEditingController();
+  final _passwordTextCtrl = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,15 +35,17 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset('assets/diamond.png'),
                 SizedBox(height: 16.0),
-                Text('SHRHEIEIDHINE'),
+                Text('SHRINE'),
               ],
             ),
             SizedBox(height: 120.0),
             TextField(
-                decoration:
-                    InputDecoration(filled: true, labelText: 'Username')),
+              controller: _usernameTextCtrl,
+              decoration: InputDecoration(filled: true, labelText: 'Username'),
+            ),
             SizedBox(height: 12.0),
             TextField(
+              controller: _passwordTextCtrl,
               decoration: InputDecoration(filled: true, labelText: 'Password'),
               obscureText: true,
             ),
@@ -49,12 +53,17 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 FlatButton(
                   child: Text('Cancel'),
-                  onPressed: () {},
+                  onPressed: () {
+                    _usernameTextCtrl.clear();
+                    _passwordTextCtrl.clear();
+                  },
                 ),
                 RaisedButton(
                   child: Text('Sign in'),
                   color: Theme.of(context).accentColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 )
               ],
             )
