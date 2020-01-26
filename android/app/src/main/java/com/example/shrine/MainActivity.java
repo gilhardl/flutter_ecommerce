@@ -1,4 +1,4 @@
-package com.example.mdc100series;
+package com.example.shrine;
 
 import android.os.Bundle;
 
