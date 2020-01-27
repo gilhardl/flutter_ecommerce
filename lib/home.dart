@@ -53,10 +53,9 @@ class HomePage extends StatelessWidget {
         crossAxisCount: 2,
         padding: EdgeInsets.all(16.0),
         childAspectRatio: 8.0 / 9.0,
-        // TODO: Build a grid of cards (102)
         children: <Widget>[Card()],
       ),
-      // TODO: Set resizeToAvoidBottomInset (101)
+      resizeToAvoidBottomInset: false,
     );
   }
 }
