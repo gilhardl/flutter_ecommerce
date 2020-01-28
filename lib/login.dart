@@ -77,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0)),
                   ),
+                  elevation: 4.0,
                   onPressed: () {
                     Navigator.pop(context);
                   },
