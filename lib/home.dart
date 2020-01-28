@@ -92,7 +92,6 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  // TODO: Change innermost Column (103)
                   children: <Widget>[
                     Text(
                       product == null ? '' : product.name,
