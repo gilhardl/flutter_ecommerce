@@ -53,6 +53,7 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 FlatButton(
                   child: Text('Cancel'),
+                  textColor: Theme.of(context).accentColor,
                   onPressed: () {
                     _usernameTextCtrl.clear();
                     _passwordTextCtrl.clear();
