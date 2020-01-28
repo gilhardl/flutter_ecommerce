@@ -15,6 +15,7 @@
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
+import 'supplemental/cut_corners_border.dart';
 
 import 'home.dart';
 import 'login.dart';
@@ -67,7 +68,7 @@ ThemeData _buildShrineTheme() {
     accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
     primaryIconTheme: base.iconTheme.copyWith(color: kShrineBrown900),
     inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(),
+      border: CutCornersBorder(),
     ),
   );
 }
