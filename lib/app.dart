@@ -45,10 +45,11 @@ class _ShrineAppState extends State<ShrineApp> {
     return MaterialApp(
         title: 'Shrine',
         home: Backdrop(
-            // TODO: Make currentCategory field take _currentCategory (104)
-            currentCategory: Category.all,
+            currentCategory: _currentCategory,
             // TODO: Pass _currentCategory for frontLayer (104)
-            frontLayer: HomePage(),
+            frontLayer: HomePage(
+              category: _currentCategory,
+            ),
             // TODO: Change backLayer field value to CategoryMenuPage (104)
             backLayer: CategoryMenuPage(
               currentCategory: _currentCategory,
@@ -56,8 +57,6 @@ class _ShrineAppState extends State<ShrineApp> {
             ),
             frontTitle: Text('SHRINE'),
             backTitle: Text('MENU')),
-        // TODO: Make currentCategory field take _currentCategory (104)
-        // TODO: Pass _currentCategory for frontLayer (104)
         initialRoute: '/login',
         onGenerateRoute: _getRoute,
         theme: _buildShrineTheme());
