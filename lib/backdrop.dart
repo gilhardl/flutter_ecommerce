@@ -39,7 +39,9 @@ class _BackdropState extends State<Backdrop>
       children: <Widget>[
         // TODO: Wrap backLayer in an ExcludeSemantics widget (104)
         widget.backLayer,
-        widget.frontLayer,
+        _FrontLayer(
+          child: widget.frontLayer,
+        ),
       ],
     );
   }
@@ -81,6 +83,35 @@ class _BackdropState extends State<Backdrop>
       appBar: appBar,
       // TODO: Return a LayoutBuilder widget (104)
       body: _buildStack(),
+    );
+  }
+}
+
+class _FrontLayer extends StatelessWidget {
+  // TODO: Add on-tap callback (104)
+  const _FrontLayer({
+    Key key,
+    this.child,
+  }) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      elevation: 16.0,
+      shape: BeveledRectangleBorder(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(46.0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          // TODO: Add a GestureDetector (104)
+          Expanded(
+            child: child,
+          ),
+        ],
+      ),
     );
   }
 }
