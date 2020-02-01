@@ -46,11 +46,9 @@ class _ShrineAppState extends State<ShrineApp> {
         title: 'Shrine',
         home: Backdrop(
             currentCategory: _currentCategory,
-            // TODO: Pass _currentCategory for frontLayer (104)
             frontLayer: HomePage(
               category: _currentCategory,
             ),
-            // TODO: Change backLayer field value to CategoryMenuPage (104)
             backLayer: CategoryMenuPage(
               currentCategory: _currentCategory,
               onCategoryTap: _onCategoryTap,
